@@ -1,0 +1,30 @@
+@import "../mixins/mixin-button";
+
+[class*="mob-btn--"] {
+  height: 48px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 160px;
+  border: 1px solid transparent;
+  border-radius: @border-radius-base;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 @spacing-base;
+
+  + [class*="mob-btn--"] {
+    margin-left: 20px;
+  }
+}
+
+
+
+.mob-btn--blue {
+  .mixin-button-variant(@color-white; @color-blue; @color-blue; transparent; @color-blue; @color-blue);
+}
+
+.mob-btn--white {
+  .mixin-button-variant(@color-blue; @color-white; @color-white; @color-blue; @color-white; @color-blue);
+}

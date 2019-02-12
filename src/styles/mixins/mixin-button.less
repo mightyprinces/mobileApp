@@ -1,0 +1,32 @@
+// Hover | Active | Focus
+.mixin-button-variant(@color; @background; @border; @background-hover; @color-hover; @border-hover) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:focus {
+    color: @color-hover;
+    background-color: @background-hover;
+    border-color: @border-hover;
+  }
+  &:hover {
+    color: @color-hover;
+    background-color: @background-hover;
+    border-color: @border-hover;
+  }
+  &:active {
+    color: @color-hover;
+    background-color: @background-hover;
+    border-color: @border-hover;
+
+    &:hover,
+    &:focus {
+      color: @color-hover;
+      background-color: @background-hover;
+      border-color: @border-hover;
+    }
+  }
+  &:active {
+    background-image: none;
+  }
+}
